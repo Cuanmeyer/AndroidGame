@@ -1,7 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="100">
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/linearLayout1"
+      android:minWidth="25px"
+      android:minHeight="25px"
+      android:layout_weight="20">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout5"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_weight="1">
+      <ImageView
+          android:src="@drawable/player"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:id="@+id/ivPlayer" />
+      <TextView
+          android:text="Player: 0"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:id="@+id/tvPlayerScore"
+          android:gravity="center" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout6"
+        android:layout_weight="1">
+      <ImageView
+          android:src="@drawable/cpu"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:id="@+id/ivCPU" />
+      <TextView
+          android:text="CPU: 0"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:id="@+id/tvCPUScore"
+          android:gravity="center" />
+    </LinearLayout>
+  </LinearLayout>
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/linearLayout2"
+      android:layout_weight="60"
+      android:gravity="center">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout4"
+        android:gravity="center">
+      <ImageButton
+          android:src="@drawable/rock"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/ibRock" />
+      <ImageButton
+          android:src="@drawable/paper"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/ibPaper" />
+      <ImageButton
+          android:src="@drawable/scissors"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/ibScissors" />
+    </LinearLayout>
+    <ImageView
+        android:src="@drawable/cpu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/ivCPUChoice" />
+  </LinearLayout>
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/linearLayout3"
+      android:minWidth="25px"
+      android:minHeight="25px"
+      android:layout_weight="20"
+      android:gravity="center">
+    <Button
+        android:text="Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bReset" />
+    <Button
+        android:text="Close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bClose" />
+  </LinearLayout>
 </LinearLayout>
